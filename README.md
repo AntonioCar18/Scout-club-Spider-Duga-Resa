@@ -1,16 +1,72 @@
-# React + Vite
+# OI Spider — Scout Club Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Official website for **OI Spider** (Odred izviđača "Spider"), a scout detachment based in Duga Resa, Karlovačka županija, Croatia. The detachment was officially re-established on April 25, 1952, with roots tracing back to 1927, and today carries the name it adopted in 1996.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **[React](https://react.dev/)** (JavaScript, `.jsx` — no TypeScript)
+- **[Vite](https://vitejs.dev/)** — build tool and dev server
+- **[Tailwind CSS v4](https://tailwindcss.com/)** — utility-first styling, integrated via `@tailwindcss/vite`
+- **[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)** — display/heading font
+- **[Inter](https://fonts.google.com/specimen/Inter)** — body font
 
-## React Compiler
+## Design system
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Token | Hex | Usage |
+|---|---|---|
+| Dark green | `#083a2c` | Header, footer, dark sections |
+| Brand green | `#0e674b` | Accents, eyebrow labels |
+| Cream | `#f6f1e4` | Page background, light sections |
+| Accent yellow | `#f9f307` | Small accents only (underlines, dashes) — not large fills |
+| Muted text | `#5a6359` | Secondary/body text |
 
-## Expanding the Oxlint configuration
+Sourced directly from the club's own logo colors. Yellow is used sparingly — as thin accent lines and hover underlines — rather than on large surfaces like buttons.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Sections
+
+- **Header** — sticky nav with mobile hamburger menu
+- **Hero** — introduction, key dates, CTA buttons
+- **History** (`Povijest`) — the detachment's story from 1927 to today, with a timeline
+- **Activities** (`Aktivnosti`) — camps, the scout olympics, and more
+- **Gallery** (`Galerija`) — photo grid
+- **Bethlehem Light** (`Tradicija`) — the yearly tradition of bringing the Peace Light from Vienna
+- **News** (`Novosti`) — club updates and announcements
+- **Contact** (`Kontakt`) — how to get in touch
+- **Footer** — sitemap, social links, contact info
+
+## Getting started
+
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
+
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## Build
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+Outputs a production build to `dist/`.
+
+## Project structure
+
+\`\`\`
+src/
+  assets/          # logo and other static assets
+  components/
+    Header.jsx
+    Hero.jsx
+    History.jsx
+    Activities.jsx
+    Gallery.jsx
+    BethlemLight.jsx
+    Newspapers.jsx
+    Contact.jsx
+    Footer.jsx
+  App.jsx
+  main.jsx
+  index.css
+\`\`\`
